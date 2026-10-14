@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Osakpolor Ogiemudia (Surge) | Full-Stack Product Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0A1628;
+      --navy-card: #112240;
+      --teal: #00B5A3;
+      --teal-dim: #007A6E;
+      --off-white: #F0EDE6;
+      --body-text: #C8C4BC;
+      --mid-text: #8A8680;
+    }
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background-color: var(--navy);
+      color: var(--off-white);
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Asymmetric Hero Styling (Desktop) */
+    @media (min-width: 1024px) {
+      .hero-split {
+        position: relative;
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+      }
+      .hero-bg-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 52%;
+        background-image: url('profile.jpg');
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        z-index: 1;
+      }
+      .hero-bg-img::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, #0A1628 0%, rgba(10,22,40,0.85) 15%, rgba(10,22,40,0.2) 60%, transparent 100%),
+                    linear-gradient(to top, #0A1628 0%, transparent 25%),
+                    linear-gradient(to bottom, #0A1628 0%, transparent 15%);
+      }
+    }
+    .project-card {
+      background: rgba(17, 34, 64, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .project-card:hover {
+      border-color: rgba(0, 181, 163, 0.45);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px -12px rgba(0, 181, 163, 0.15);
+    }
+  </style>
+</head>
+<body class="selection:bg-[#00B5A3] selection:text-black">
+
+  <!-- Fixed Navigation Header -->
+  <nav class="fixed top-0 inset-x-0 z-50 px-4 sm:px-8 py-3.5 sm:py-5 flex items-center justify-between bg-[#0A1628]/90 backdrop-blur-md border-b border-slate-800/50">
+    <a href="#" class="flex items-center space-x-2.5 text-sm font-semibold tracking-wide text-white">
+      <span class="w-8 h-8 rounded-lg bg-[#00B5A3] text-black font-bold flex items-center justify-center mono text-xs shrink-0 shadow-sm shadow-[#00B5A3]/30">SO</span>
+      <span class="truncate"><span class="hidden sm:inline">Osakpolor Ogiemudia </span><span class="text-[#00B5A3] font-bold">Surge</span></span>
+    </a>
+    <div class="flex items-center space-x-3 sm:space-x-6 text-sm font-medium">
+      <a href="#systems" class="hidden md:inline-block text-slate-400 hover:text-white transition-colors">Systems</a>
+      <a href="#foundations" class="hidden md:inline-block text-slate-400 hover:text-white transition-colors">Foundations</a>
+      <a href="mailto:pogiemudia@gmail.com" class="px-3.5 py-1.5 sm:px-4 rounded-full bg-slate-800 hover:bg-[#00B5A3] hover:text-black text-slate-200 border border-slate-700 transition-all text-xs font-semibold whitespace-nowrap active:scale-95">
+        Get in Touch
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section: Fullscreen Asymmetric Split (Desktop) & Flowing Story (Mobile) -->
+  <section class="hero-split pt-24 sm:pt-28 lg:pt-0">
+    <!-- Desktop Edge-to-Edge Right Portrait -->
+    <div class="hero-bg-img hidden lg:block"></div>
+
+    <!-- Content Column -->
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 lg:px-12 w-full relative z-10 py-8 sm:py-16 lg:py-24">
+      <div class="max-w-xl">
+        
+        <!-- Mobile/Tablet Editorial Profile Headshot -->
+        <div class="lg:hidden mb-6 flex items-center space-x-4">
+          <img src="profile.jpg" alt="Osakpolor Ogiemudia (Surge)" class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl ring-2 ring-[#00B5A3]/50 shadow-xl object-cover object-top shrink-0">
+          <div>
+            <div class="font-bold text-lg text-white">Osakpolor Ogiemudia</div>
+            <div class="text-xs text-[#00B5A3] mono font-medium">@Surge &bull; Product Engineer</div>
+            <div class="text-[11px] text-slate-400 mt-0.5">Systems &amp; Edge AI Architecture</div>
+          </div>
+        </div>
+
+        <!-- Technical Role Badge -->
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#00B5A3]/10 border border-[#00B5A3]/30 text-[#00B5A3] text-xs mono mb-4 sm:mb-6">
+          <span class="w-2 h-2 rounded-full bg-[#00B5A3] animate-pulse"></span>
+          <span>Full-Stack Product Engineer &bull; Systems &amp; AI</span>
+        </div>
+
+        <!-- Primary Heading -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4 sm:mb-6 leading-[1.12]">
+          Building <span class="text-[#00B5A3]">revenue-critical</span> software systems.
+        </h1>
+
+        <!-- Core Value Proposition -->
+        <p class="text-sm sm:text-lg text-slate-300 font-normal leading-relaxed mb-6 sm:mb-8">
+          I architect and ship complex software systems from 0 to 1 across healthcare logistics, offline retail infrastructure, native desktop sync daemons, and client-side edge AI.
+        </p>
+
+        <!-- Technical Pillars Ribbon -->
+        <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-6 sm:mb-8 text-[11px] sm:text-xs mono">
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-slate-300 border border-slate-700/60">Distributed Systems</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-slate-300 border border-slate-700/60">Offline-First Architectures</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-slate-300 border border-slate-700/60">Desktop &amp; Web Runtimes</span>
+          <span class="px-2.5 py-1 rounded-lg bg-slate-800/80 text-slate-300 border border-slate-700/60">Cloud &amp; Event Webhooks</span>
+        </div>
+
+        <!-- Call to Actions -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:space-x-4">
+          <a href="#systems" class="px-6 py-3.5 sm:py-3 rounded-xl bg-[#00B5A3] hover:bg-[#009e8e] text-black font-bold text-sm tracking-wide transition-all shadow-lg shadow-[#00B5A3]/25 inline-flex items-center justify-center space-x-2 text-center active:scale-98">
+            <span>Explore Deployed Systems</span>
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </a>
+          <a href="mailto:pogiemudia@gmail.com" class="px-6 py-3.5 sm:py-3 rounded-xl bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-semibold text-sm transition-all border border-slate-700/80 text-center active:scale-98">
+            Say Hello
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Ribbon -->
+  <section class="border-y border-slate-800/80 bg-[#07101E]">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10 py-6 sm:py-8 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div class="p-2 sm:p-0">
+        <div class="text-2xl sm:text-3xl font-extrabold mono text-[#00B5A3] mb-1">Full Vertical</div>
+        <div class="text-[11px] sm:text-xs text-slate-400 font-medium leading-tight">Architected &amp; Shipped From 0 to 1</div>
+      </div>
+      <div class="p-2 sm:p-0">
+        <div class="text-2xl sm:text-3xl font-extrabold mono text-white mb-1">100%</div>
+        <div class="text-[11px] sm:text-xs text-slate-400 font-medium leading-tight">Offline-First Transaction Durability</div>
+      </div>
+      <div class="p-2 sm:p-0">
+        <div class="text-2xl sm:text-3xl font-extrabold mono text-[#00B5A3] mb-1">Zero Cost</div>
+        <div class="text-[11px] sm:text-xs text-slate-400 font-medium leading-tight">Client-Side WASM &amp; Edge AI Compute</div>
+      </div>
+      <div class="p-2 sm:p-0">
+        <div class="text-2xl sm:text-3xl font-extrabold mono text-white mb-1">Multi-Modal</div>
+        <div class="text-[11px] sm:text-xs text-slate-400 font-medium leading-tight">Prescription Vision, Audio &amp; WhatsApp</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Production Systems -->
+  <section id="systems" class="max-w-7xl mx-auto px-5 sm:px-10 py-16 sm:py-24">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 border-b border-slate-800 pb-4 sm:pb-6 gap-4">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-widest text-[#00B5A3] mono">Architecture Showcase</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-white mt-1 sm:mt-2">Deployed Systems &amp; Engines</h2>
+      </div>
+      <p class="text-xs sm:text-sm text-slate-400 max-w-md">Every system below is production-built, handles real-world business constraints, and is accessible live.</p>
+    </div>
+
+    <div class="space-y-8 sm:space-y-12">
+      
+      <!-- 1. PharmaStackX Consumer Network -->
+      <article class="project-card rounded-xl sm:rounded-2xl p-5 sm:p-8 lg:p-10">
+        <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4 sm:gap-6 mb-5 sm:mb-6">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded bg-[#00B5A3]/15 text-[#00B5A3] border border-[#00B5A3]/30 text-xs mono font-semibold">FLAGSHIP PLATFORM</span>
+              <span class="text-xs text-slate-400 mono">Enterprise Architecture</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white">PharmaStackX Consumer Healthcare Network</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">Multi-Sided Medication Discovery, Automated Procurement &amp; Fulfillment Engine</p>
+          </div>
+          <a href="https://www.pharmastackx.com" target="_blank" rel="noopener" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#00B5A3] hover:bg-[#009e8e] text-black font-bold text-xs tracking-wide transition-all inline-flex items-center justify-center space-x-2 self-start shadow-md shadow-[#00B5A3]/20 active:scale-98">
+            <span>Browse Live Site</span>
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+          Nationwide medication network orchestrating real-time discovery, conversational WhatsApp bidding, multimodal prescription vision, and decentralized pharmacy storefronts.
+        </p>
+
+        <!-- Clean Scannable 6-Pillar Subsystems Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-6 sm:mb-8">
+          <div class="p-3.5 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1 flex items-center space-x-1.5">
+              <span>🔍</span><span>Multimodal Search</span>
+            </div>
+            <div class="text-slate-400 leading-snug">Prescription &amp; pill-photo OCR scanning with instant real-time broadcast to state pharmacists.</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1 flex items-center space-x-1.5">
+              <span>🤖</span><span>WhatsApp Bot Daemon</span>
+            </div>
+            <div class="text-slate-400 leading-snug">Autonomous group bot parsing natural-language quotes into database records via Gemma 4.</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1 flex items-center space-x-1.5">
+              <span>💬</span><span>Ask Rx AI Triage</span>
+            </div>
+            <div class="text-slate-400 leading-snug">Conversational patient triage agent with automated human-pharmacist escalation protocols.</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1 flex items-center space-x-1.5">
+              <span>🏪</span><span>Pharmacy Subdomains</span>
+            </div>
+            <div class="text-slate-400 leading-snug">Instant branded storefronts (<code class="text-[#00B5A3]">slug.pharmastackx.com</code>) synced to live shelf stock.</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1 flex items-center space-x-1.5">
+              <span>📦</span><span>Unified Master Catalog</span>
+            </div>
+            <div class="text-slate-400 leading-snug">Centralized multi-pharmacy search index with order pooling and automated courier dispatch.</div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1 flex items-center space-x-1.5">
+              <span>📰</span><span>Restock &amp; Activity Feed</span>
+            </div>
+            <div class="text-slate-400 leading-snug">Live pharmacy intake broadcasts, health newsletters, and real-time delivery lifecycle tracking.</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs mono">
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Next.js 16</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Gemma 4 AI</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Multimodal Vision OCR</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">MongoDB (45 Schemas)</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Pusher WebSockets</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">WhatsApp Webhook Daemon</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Dynamic Subdomains</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Paystack</span>
+        </div>
+      </article>
+
+      <!-- 2. PSX Point-of-Sale -->
+      <article class="project-card rounded-xl sm:rounded-2xl p-5 sm:p-8 lg:p-10">
+        <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4 sm:gap-6 mb-5 sm:mb-6">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded bg-blue-500/15 text-blue-400 border border-blue-500/30 text-xs mono font-semibold">RETAIL &amp; STORE SYSTEMS</span>
+              <span class="text-xs text-slate-400 mono">High-Throughput Engine</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white">PSX Point-of-Sale (Universal POS Engine)</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">Offline-First Retail &amp; Store Inventory Management Terminal</p>
+          </div>
+          <a href="https://psx-pos.vercel.app/login?demo=guest" target="_blank" rel="noopener" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs tracking-wide transition-all inline-flex items-center justify-center space-x-2 self-start border border-slate-700 active:scale-98">
+            <span>Launch Live POS &rarr;</span>
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
+          Engineered for high-volume retail locations subject to intermittent internet dropouts. Operates with zero latency offline using local IndexedDB, reconciling transactions on reconnect using atomic multi-document MongoDB sessions to guarantee ACID consistency.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
+          <div class="p-4 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1.5 flex items-center space-x-1.5">
+              <span>⚡</span><span>IndexedDB Offline Sync</span>
+            </div>
+            <div class="text-slate-400 leading-relaxed">Unique <code class="text-blue-400">offlineReceiptNumber</code> idempotency keys prevent double-charging and duplicate deductions.</div>
+          </div>
+          <div class="p-4 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1.5 flex items-center space-x-1.5">
+              <span>📦</span><span>Packaging Hierarchy Math</span>
+            </div>
+            <div class="text-slate-400 leading-relaxed">Dynamic Carton &rarr; Box &rarr; Pack &rarr; Piece conversions with FIFO batch inventory depletion.</div>
+          </div>
+          <div class="p-4 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1.5 flex items-center space-x-1.5">
+              <span>🖨️</span><span>Hardware ESC/POS Printing</span>
+            </div>
+            <div class="text-slate-400 leading-relaxed">Direct byte buffer generation for 58mm/80mm thermal receipt printers and hardware USB barcode scanning.</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs mono">
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Next.js App Router</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">IndexedDB</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">MongoDB Replica Sets</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">ACID Transactions</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">ESC/POS Printing</span>
+        </div>
+      </article>
+
+      <!-- 3. PSX Clinical EMR -->
+      <article class="project-card rounded-xl sm:rounded-2xl p-5 sm:p-8 lg:p-10">
+        <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4 sm:gap-6 mb-5 sm:mb-6">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded bg-purple-500/15 text-purple-400 border border-purple-500/30 text-xs mono font-semibold">CLINICAL HEALTHCARE</span>
+              <span class="text-xs text-slate-400 mono">Compliance Grade</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white">PSX Clinical EMR</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">AI-Assisted Electronic Medical Records for Clinics &amp; Pharmacies</p>
+          </div>
+          <a href="https://psxemr.vercel.app/login?demo=guest" target="_blank" rel="noopener" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs tracking-wide transition-all inline-flex items-center justify-center space-x-2 self-start border border-slate-700 active:scale-98">
+            <span>Launch Live EMR &rarr;</span>
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
+          A standardized outpatient encounter pipeline capturing clinical consults across 6 stages: Complaint &rarr; HPC &rarr; Vitals &rarr; Review of Systems &rarr; Assessment &rarr; Management Plan. Features audio consultation recording and tamper-evident audit logs.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
+          <div class="p-4 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1.5 flex items-center space-x-1.5">
+              <span>🎙️</span><span>Audio Voice Consultation</span>
+            </div>
+            <div class="text-slate-400 leading-relaxed">Records clinician-patient dialogue, drafting structured notes and AI risk indicators automatically.</div>
+          </div>
+          <div class="p-4 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1.5 flex items-center space-x-1.5">
+              <span>🛡️</span><span>Immutable Audit Logging</span>
+            </div>
+            <div class="text-slate-400 leading-relaxed">Polymorphic change logs recording every single patient record addition, actor ID, and timestamp.</div>
+          </div>
+          <div class="p-4 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1.5 flex items-center space-x-1.5">
+              <span>🔗</span><span>SSO Dispensary Bridge</span>
+            </div>
+            <div class="text-slate-400 leading-relaxed">Single sign-on token pipeline transmitting clinical prescription plans directly to dispensary inventory.</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs mono">
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Next.js</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Prisma ORM</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">MongoDB</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Gemini Clinical AI</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Web Audio API</span>
+        </div>
+      </article>
+
+      <!-- 4. Synkk -->
+      <article class="project-card rounded-xl sm:rounded-2xl p-5 sm:p-8 lg:p-10">
+        <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4 sm:gap-6 mb-5 sm:mb-6">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded bg-amber-500/15 text-amber-400 border border-amber-500/30 text-xs mono font-semibold">NATIVE DESKTOP &amp; VISION</span>
+              <span class="text-xs text-slate-400 mono">Systems Daemon</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white">Synkk</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">Universal Legacy POS-to-Cloud Sync Bridge</p>
+          </div>
+        </div>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
+          A native Windows background daemon and browser extension designed to extract live stock levels from legacy desktop software with zero API access using screen vision and file-system watchers.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
+          <div class="p-4 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1.5 flex items-center space-x-1.5">
+              <span>🖥️</span><span>Screen Vision &amp; OCR</span>
+            </div>
+            <div class="text-slate-400 leading-relaxed">Monitors desktop application windows and file outputs in real time without touching closed database schemas.</div>
+          </div>
+          <div class="p-4 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1.5 flex items-center space-x-1.5">
+              <span>🧠</span><span>Claude AI Normalizer</span>
+            </div>
+            <div class="text-slate-400 leading-relaxed">Converts unstructured POS strings (<code class="text-amber-400">"PCM 500"</code>) into clean items (<code class="text-[#00B5A3]">"Paracetamol 500mg - Tablet"</code>).</div>
+          </div>
+          <div class="p-4 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1.5 flex items-center space-x-1.5">
+              <span>🔄</span><span>Local SQLite Cache</span>
+            </div>
+            <div class="text-slate-400 leading-relaxed">Durable local state buffer that continuously synchronizes physical shelf stock with the online cloud catalog.</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs mono">
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Electron</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">TypeScript</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">SQLite</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Claude 3.5 Sonnet</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Computer Vision OCR</span>
+        </div>
+      </article>
+
+      <!-- 5. CS50P AI Tutor -->
+      <article class="project-card rounded-xl sm:rounded-2xl p-5 sm:p-8 lg:p-10">
+        <div class="flex flex-col lg:flex-row lg:items-start justify-between gap-4 sm:gap-6 mb-5 sm:mb-6">
+          <div>
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded bg-cyan-500/15 text-cyan-400 border border-cyan-500/30 text-xs mono font-semibold">CLIENT-SIDE EDGE COMPUTE</span>
+              <span class="text-xs text-slate-400 mono">Zero Server Cost</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold text-white">CS50P AI Tutor</h3>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">In-Browser Python IDE with WebAssembly &amp; WebGPU Neural Inference</p>
+          </div>
+          <a href="https://pythonpractice-gules.vercel.app/" target="_blank" rel="noopener" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-xs tracking-wide transition-all inline-flex items-center justify-center space-x-2 self-start border border-slate-700 active:scale-98">
+            <span>Browse Live IDE</span>
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+          </a>
+        </div>
+
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
+          Interactive Python learning environment running 100% on the user's client hardware. Compiles code in the browser CPU via Pyodide WebAssembly and provides real-time AI code diagnostics via local WebGPU neural models.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
+          <div class="p-4 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1.5 flex items-center space-x-1.5">
+              <span>⚙️</span><span>Pyodide WebAssembly</span>
+            </div>
+            <div class="text-slate-400 leading-relaxed">Full client-side Python 3 execution sandbox with zero backend server execution overhead.</div>
+          </div>
+          <div class="p-4 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1.5 flex items-center space-x-1.5">
+              <span>⚡</span><span>WebGPU Gemma 4 Inference</span>
+            </div>
+            <div class="text-slate-400 leading-relaxed">Runs local LLM inference directly on the client's GPU for instant syntax and error tutoring.</div>
+          </div>
+          <div class="p-4 rounded-xl bg-[#0A1628]/80 border border-slate-800 text-xs">
+            <div class="font-bold text-white mb-1.5 flex items-center space-x-1.5">
+              <span>💻</span><span>Monaco Code Editor</span>
+            </div>
+            <div class="text-slate-400 leading-relaxed">Full VS Code-grade editor with real-time stdout terminal streaming and code formatting.</div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs mono">
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">WebAssembly (Pyodide)</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">WebGPU</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Gemma 4</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Next.js</span>
+          <span class="px-2.5 py-1 rounded bg-slate-800/90 text-slate-300">Monaco Editor</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Technical Foundations Section -->
+  <section id="foundations" class="border-t border-slate-800/80 bg-[#07101E] py-14 sm:py-20">
+    <div class="max-w-7xl mx-auto px-5 sm:px-10">
+      <div class="mb-8 sm:mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#00B5A3] mono">Technical Foundations</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1 sm:mt-2">Core Engineering Disciplines</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="p-5 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0A1628] border border-slate-800">
+          <div class="text-sm font-bold text-white mb-1">Distributed &amp; Offline Systems</div>
+          <div class="text-xs text-[#00B5A3] mono mb-2.5">Resilience</div>
+          <p class="text-xs text-slate-400 leading-relaxed">IndexedDB-to-cloud synchronization, idempotency guarantees, and ACID multi-document transactions.</p>
+        </div>
+        <div class="p-5 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0A1628] border border-slate-800">
+          <div class="text-sm font-bold text-white mb-1">AI &amp; Agentic Systems</div>
+          <div class="text-xs text-[#00B5A3] mono mb-2.5">Intelligence</div>
+          <p class="text-xs text-slate-400 leading-relaxed">Autonomous agent orchestration, conversational parsers, and client-side on-device WebGPU inference.</p>
+        </div>
+        <div class="p-5 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0A1628] border border-slate-800">
+          <div class="text-sm font-bold text-white mb-1">Native Desktop &amp; Hardware</div>
+          <div class="text-xs text-[#00B5A3] mono mb-2.5">Systems I/O</div>
+          <p class="text-xs text-slate-400 leading-relaxed">Electron background daemons, computer vision OCR, file-system watchers, and thermal ESC/POS byte protocols.</p>
+        </div>
+        <div class="p-5 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0A1628] border border-slate-800">
+          <div class="text-sm font-bold text-white mb-1">Payment Infrastructure &amp; Security</div>
+          <div class="text-xs text-[#00B5A3] mono mb-2.5">Fintech</div>
+          <p class="text-xs text-slate-400 leading-relaxed">HMAC-SHA512 raw-buffer webhook validation, multi-tenant session isolation, and cryptographic auth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer -->
+  <footer class="max-w-7xl mx-auto px-5 sm:px-10 py-12 sm:py-16 border-t border-slate-800/80 text-sm">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-8 text-center sm:text-left">
+      <div>
+        <div class="font-bold text-white text-base">Osakpolor Ogiemudia (Surge)</div>
+        <div class="text-xs text-slate-400 mt-0.5">Full-Stack Product Engineer &bull; Systems &amp; AI</div>
+      </div>
+      <div class="flex flex-wrap items-center justify-center sm:justify-end gap-5 sm:gap-6 text-xs sm:text-sm">
+        <a href="mailto:pogiemudia@gmail.com" class="text-slate-300 hover:text-[#00B5A3] transition-colors">pogiemudia@gmail.com</a>
+        <a href="https://github.com/Surge-Ogiemudia" target="_blank" rel="noopener" class="text-slate-300 hover:text-[#00B5A3] transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/osakpolor-ogiemudia-surge-3a00501ab/" target="_blank" rel="noopener" class="text-slate-300 hover:text-[#00B5A3] transition-colors">LinkedIn</a>
+      </div>
+    </div>
+    
+    <!-- Small, Quiet Education Line at the very bottom -->
+    <div class="pt-6 border-t border-slate-800/50 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 mono gap-3 text-center sm:text-left">
+      <div>Education: MSc Artificial Intelligence ('27) &bull; MPH ('26) &bull; Doctor of Pharmacy (PharmD '24)</div>
+      <div>&copy; 2026 Surge Ogiemudia. Built for production.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
